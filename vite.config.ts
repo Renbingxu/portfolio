@@ -8,7 +8,7 @@ import postCssPxToRem from 'postcss-pxtorem'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',
+    base: process.env.NODE_ENV === 'production' ? '/' : '/',
     plugins: [
     vue(),
     vueDevTools(),
