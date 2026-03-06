@@ -6,13 +6,12 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 import postCssPxToRem from 'postcss-pxtorem'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // https://vite.dev/config/
 export default defineConfig({
     base: process.env.NODE_ENV === 'production' ? '/' : '/',
-    plugins: [
-    vue(),
-    vueDevTools(),
-    ],
+    plugins: [vue(), vueDevTools(), cloudflare()],
     css: {
         postcss: {
             plugins: [
