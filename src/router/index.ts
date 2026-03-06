@@ -1,5 +1,5 @@
 
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { nextTick } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -78,7 +78,7 @@ const routes = [
 
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     routes,
     // 滚动行为配置
     scrollBehavior(to, from, savedPosition) {
